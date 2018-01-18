@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.upyoo.cloud.common.entity.ResultModel;
+
 @FeignClient("automation")
 @RequestMapping("/autoapp")
 public interface AutoAppApi {
 	@GetMapping(value="/{owner}",produces ="application/json; charset=utf-8")
-	public Map<String, Object> queryAllAutoApp(@PathVariable("owner") String owner) ;
+	public ResultModel queryAllAutoApp(@PathVariable("owner") String owner) ;
 	
 	@GetMapping(value="/app")
 	public Map<String, Object> get(@RequestParam("id") String id) ;
