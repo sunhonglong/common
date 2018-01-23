@@ -6,10 +6,15 @@ public class CooperationApp extends BaseEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	private String sysId;
 	private String type;
 	private String target;
 	private String description;
+	private String tag;
+	private String sysCreatedOn;
+	private String sysUpdatedOn;
 	private String owner;
+	private String bearychatChannel;
 	public String getType() {
 		return type;
 	}
@@ -35,4 +40,43 @@ public class CooperationApp extends BaseEntity implements Serializable {
 		this.owner = owner;
 	}
 
+	public String getBearychatChannel() {
+		return bearychatChannel;
+	}
+
+	public void setBearychatChannel(String bearychatChannel) {
+		this.bearychatChannel = bearychatChannel;
+	}
+
+	public String getSysId() {
+		return sysId;
+	}
+
+	public void setSysId(String sysId) {
+		this.sysId = sysId;
+	}
+
+	public String getTag() {
+		return tag;
+	}
+
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
+
+	public String getSysCreatedOn() {
+		return sysCreatedOn;
+	}
+
+	public void setSysCreatedOn(String sysCreatedOn) {
+		this.sysCreatedOn = sysCreatedOn;
+	}
+
+	public String getSysUpdatedOn() {
+		return sysUpdatedOn;
+	}
+
+	public void setSysUpdatedOn(String sysUpdatedOn) {
+		this.sysUpdatedOn = sysUpdatedOn;
+	}
 }
