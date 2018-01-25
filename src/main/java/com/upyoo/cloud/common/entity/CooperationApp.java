@@ -12,9 +12,9 @@ public class CooperationApp extends BaseEntity implements Serializable {
     private String target;
     private String description;
     private String tag;
-    private String sysCreatedOn;
-    private String sysUpdatedOn;
-    private String sysDeleted;
+    private Long sysCreatedOn;
+    private Long sysUpdatedOn;
+    private Integer sysDeleted;
     private String owner;
     private String jenkinsUsername;
     private String jenkinsPassword;
@@ -78,22 +78,6 @@ public class CooperationApp extends BaseEntity implements Serializable {
         this.tag = tag;
     }
 
-    public String getSysCreatedOn() {
-        return sysCreatedOn;
-    }
-
-    public void setSysCreatedOn(String sysCreatedOn) {
-        this.sysCreatedOn = sysCreatedOn;
-    }
-
-    public String getSysUpdatedOn() {
-        return sysUpdatedOn;
-    }
-
-    public void setSysUpdatedOn(String sysUpdatedOn) {
-        this.sysUpdatedOn = sysUpdatedOn;
-    }
-
     public String getSysType() {
         return sysType;
     }
@@ -108,14 +92,6 @@ public class CooperationApp extends BaseEntity implements Serializable {
 
     public void setBearychatActive(Integer bearychatActive) {
         this.bearychatActive = bearychatActive;
-    }
-
-    public String getSysDeleted() {
-        return sysDeleted;
-    }
-
-    public void setSysDeleted(String sysDeleted) {
-        this.sysDeleted = sysDeleted;
     }
 
     public String getJenkinsUsername() {
@@ -140,5 +116,29 @@ public class CooperationApp extends BaseEntity implements Serializable {
 
     public void setJenkinsUrl(String jenkinsUrl) {
         this.jenkinsUrl = jenkinsUrl;
+    }
+
+    public Long getSysCreatedOn() {
+        return sysCreatedOn;
+    }
+
+    public void setSysCreatedOn(Long sysCreatedOn) {
+        this.sysCreatedOn = sysCreatedOn;
+    }
+
+    public Long getSysUpdatedOn() {
+        return sysUpdatedOn;
+    }
+
+    public void setSysUpdatedOn(Long sysUpdatedOn) {
+        this.sysUpdatedOn = sysUpdatedOn;
+    }
+
+    public Integer getSysDeleted() {
+        return sysDeleted;
+    }
+
+    public void setSysDeleted(Integer sysDeleted) {
+        this.sysDeleted = sysDeleted;
     }
 }

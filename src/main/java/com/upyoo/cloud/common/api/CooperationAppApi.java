@@ -38,4 +38,13 @@ public interface CooperationAppApi {
 
     @PostMapping("/update")
     public ResultModel updateCooperationAppById(@RequestBody CooperationApp cooperationApp);
+
+    @DeleteMapping("/delete/{sysId}")
+    public ResultModel deleteCooperationAppById(@PathVariable("sysId") String sysId);
+
+    @GetMapping("/query/{sysId}")
+    public ResultModel queryBySysId(@PathVariable("sysId") String sysId);
+
+    @GetMapping("/query/owner/{owner}")
+    public ResultModel queryByOwner(@PathVariable("owner") String owner);
 }
