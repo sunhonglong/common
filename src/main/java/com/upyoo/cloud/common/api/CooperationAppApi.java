@@ -32,4 +32,10 @@ public interface CooperationAppApi {
 
     @PostMapping(value = "/{id}", produces = "application/json; charset=utf-8")
     public ResultModel updateById(@PathVariable("id") String id, @Param("channel") String channel, @Param("url") String url);
+
+    @PostMapping("/add")
+    public ResultModel addCooperatonApp(@RequestBody CooperationApp cooperationApp);
+
+    @PostMapping("/update")
+    public ResultModel updateCooperationAppById(@RequestBody CooperationApp cooperationApp);
 }
