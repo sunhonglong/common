@@ -141,4 +141,25 @@ public class CooperationApp extends BaseEntity implements Serializable {
     public void setSysDeleted(Integer sysDeleted) {
         this.sysDeleted = sysDeleted;
     }
+
+    @Override
+    public String toString() {
+        return "CooperationApp{" +
+                "sysId='" + sysId + '\'' +
+                ", type='" + type + '\'' +
+                ", sysType='" + sysType + '\'' +
+                ", target='" + target + '\'' +
+                ", description='" + description + '\'' +
+                ", tag='" + tag + '\'' +
+                ", sysCreatedOn=" + sysCreatedOn +
+                ", sysUpdatedOn=" + sysUpdatedOn +
+                ", sysDeleted=" + sysDeleted +
+                ", owner='" + owner + '\'' +
+                ", jenkinsUsername='" + jenkinsUsername + '\'' +
+                ", jenkinsPassword='" + jenkinsPassword + '\'' +
+                ", jenkinsUrl='" + jenkinsUrl + '\'' +
+                ", bearychatChannel='" + bearychatChannel + '\'' +
+                ", bearychatActive=" + bearychatActive +
+                '}';
+    }
 }

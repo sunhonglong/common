@@ -13,7 +13,7 @@ public class ResultModel implements Serializable {
 	private int code = CODE_SUCCESS;
 	private Object data;
 	private String message;
-	private String result = RESULT_SUCCESS;;
+	private String result = RESULT_SUCCESS;
 
 	public String getResult() {
 		return result;
@@ -59,6 +59,7 @@ public class ResultModel implements Serializable {
 
 	public static ResultModel createFail(int code) {
 		ResultModel result = new ResultModel();
+		result.setResult(RESULT_FAIL);
 		result.setCode(code);
 		return result;
 	}

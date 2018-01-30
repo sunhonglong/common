@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.upyoo.cloud.common.entity.CooperationApp;
 import com.upyoo.cloud.common.entity.ResultModel;
 
-@FeignClient("automation")
-@RequestMapping("/autoapp")
+@FeignClient("cooperation")
+@RequestMapping("/cooperationapp")
 public interface CooperationAppApi {
 
     @GetMapping(value = "/{owner}", produces = "application/json; charset=utf-8")
