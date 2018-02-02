@@ -20,7 +20,7 @@ public class CooperationApp extends BaseEntity implements Serializable {
     private String jenkinsPassword;
     private String jenkinsUrl;
     private String bearychatChannel;
-    private Integer bearychatActive;
+    private Integer active;
 
     public String getType() {
         return type;
@@ -86,12 +86,12 @@ public class CooperationApp extends BaseEntity implements Serializable {
         this.sysType = sysType;
     }
 
-    public Integer getBearychatActive() {
-        return bearychatActive;
+    public Integer getActive() {
+        return active;
     }
 
-    public void setBearychatActive(Integer bearychatActive) {
-        this.bearychatActive = bearychatActive;
+    public void setActive(Integer active) {
+        this.active = active;
     }
 
     public String getJenkinsUsername() {
@@ -159,7 +159,7 @@ public class CooperationApp extends BaseEntity implements Serializable {
                 ", jenkinsPassword='" + jenkinsPassword + '\'' +
                 ", jenkinsUrl='" + jenkinsUrl + '\'' +
                 ", bearychatChannel='" + bearychatChannel + '\'' +
-                ", bearychatActive=" + bearychatActive +
+                ", active=" + active +
                 '}';
     }
 }
