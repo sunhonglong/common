@@ -18,8 +18,6 @@ import com.upyoo.cloud.common.entity.ResultModel;
 @RequestMapping("/cooperationapp")
 public interface CooperationAppApi {
 
-    @GetMapping(value = "/{owner}", produces = "application/json; charset=utf-8")
-    public ResultModel queryAllCooperationAppByOwner(@PathVariable("owner") String owner);
 
     @GetMapping(value = "/app")
     public ResultModel get(@RequestParam("id") String id);
