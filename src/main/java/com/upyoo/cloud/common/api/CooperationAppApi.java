@@ -45,10 +45,5 @@ public interface CooperationAppApi {
 
     @GetMapping("/query/owner/{owner}")
     public ResultModel queryByOwner(@PathVariable("owner") String owner);
-
-    @PostMapping("/add/udesk")
-    public ResultModel addUdeskApp(@RequestBody String body);
-
-    @PostMapping("/send/ticket/{sysId}")
-    public ResultModel sendToTicket(@PathVariable("sysId") String sysId, @RequestBody String body);
+    
 }
