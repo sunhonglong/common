@@ -1,6 +1,8 @@
 package com.upyoo.cloud.common.api;
 
 
+import com.upyoo.cloud.common.entity.CooperationApp;
+import com.upyoo.cloud.common.entity.ResultModel;
 import feign.Param;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -10,9 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import com.upyoo.cloud.common.entity.CooperationApp;
-import com.upyoo.cloud.common.entity.ResultModel;
 
 @FeignClient("cooperation")
 @RequestMapping("/cooperationapp")
@@ -45,5 +44,11 @@ public interface CooperationAppApi {
 
     @GetMapping("/query/owner/{owner}")
     public ResultModel queryByOwner(@PathVariable("owner") String owner);
-    
+
+    @PostMapping("/add/udesk")
+    public ResultModel addUdeskApp(@RequestBody String body);
+
+    @PostMapping("/send/ticket/{sysId}")
+    public ResultModel sendToTicket(@PathVariable("sysId") String sysId, @RequestBody String body);
+
 }
