@@ -1,4 +1,4 @@
-package com.upyoo.cloud.common.api.itsmview;
+package com.upyoo.cloud.common.api.ucmpview;
 
 import com.upyoo.cloud.common.entity.ResultModel;
 import com.upyoo.cloud.common.entity.itsmview.SysUiView;
