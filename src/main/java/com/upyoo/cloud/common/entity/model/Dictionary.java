@@ -1,4 +1,4 @@
-package com.upyoo.cloud.common.entity.itsmview;
+package com.upyoo.cloud.common.entity.model;
 
 import java.io.Serializable;
 
