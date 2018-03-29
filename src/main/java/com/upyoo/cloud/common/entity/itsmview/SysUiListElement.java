@@ -17,11 +17,11 @@ public class SysUiListElement implements Serializable {
 
     private Integer sysDeleted;
 
-    private String view;
+    private String list;
 
     private String dictionary;
 
-    private Integer sort;
+    private Integer position;
 
     private static final long serialVersionUID = 1L;
 
@@ -81,12 +81,12 @@ public class SysUiListElement implements Serializable {
         this.sysDeleted = sysDeleted;
     }
 
-    public String getView() {
-        return view;
+    public String getList() {
+        return list;
     }
 
-    public void setView(String view) {
-        this.view = view == null ? null : view.trim();
+    public void setList(String list) {
+        this.list = list == null ? null : list.trim();
     }
 
     public String getDictionary() {
@@ -97,12 +97,12 @@ public class SysUiListElement implements Serializable {
         this.dictionary = dictionary == null ? null : dictionary.trim();
     }
 
-    public Integer getSort() {
-        return sort;
+    public Integer getPosition() {
+        return position;
     }
 
-    public void setSort(Integer sort) {
-        this.sort = sort;
+    public void setPosition(Integer position) {
+        this.position = position;
     }
 
     @Override
@@ -118,9 +118,9 @@ public class SysUiListElement implements Serializable {
         sb.append(", sysUpdatedOn=").append(sysUpdatedOn);
         sb.append(", sysUpdatedBy=").append(sysUpdatedBy);
         sb.append(", sysDeleted=").append(sysDeleted);
-        sb.append(", view=").append(view);
+        sb.append(", list=").append(list);
         sb.append(", dictionary=").append(dictionary);
-        sb.append(", sort=").append(sort);
+        sb.append(", position=").append(position);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

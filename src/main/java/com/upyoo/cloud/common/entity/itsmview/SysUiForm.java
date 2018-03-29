@@ -1,6 +1,7 @@
 package com.upyoo.cloud.common.entity.itsmview;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class SysUiForm implements Serializable {
     private String sysId;
@@ -22,6 +23,8 @@ public class SysUiForm implements Serializable {
     private String name;
 
     private Integer isDefault;
+
+    List<SysUiFormSection> sections;
 
     private static final long serialVersionUID = 1L;
 
@@ -103,6 +106,14 @@ public class SysUiForm implements Serializable {
 
     public void setIsDefault(Integer isDefault) {
         this.isDefault = isDefault;
+    }
+
+    public List<SysUiFormSection> getSections() {
+        return sections;
+    }
+
+    public void setSections(List<SysUiFormSection> sections) {
+        this.sections = sections;
     }
 
     @Override
