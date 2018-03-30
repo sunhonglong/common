@@ -19,7 +19,7 @@ public class SysUiList implements Serializable {
 
     private String object;
 
-    private String sortDictionary;
+    private String dictionary;
 
     private Integer sortType;
 
@@ -89,12 +89,12 @@ public class SysUiList implements Serializable {
         this.object = object == null ? null : object.trim();
     }
 
-    public String getSortDictionary() {
-        return sortDictionary;
+    public String getDictionary() {
+        return dictionary;
     }
 
-    public void setSortDictionary(String sortDictionary) {
-        this.sortDictionary = sortDictionary == null ? null : sortDictionary.trim();
+    public void setDictionary(String dictionary) {
+        this.dictionary = dictionary == null ? null : dictionary.trim();
     }
 
     public Integer getSortType() {
@@ -119,7 +119,7 @@ public class SysUiList implements Serializable {
         sb.append(", sysUpdatedBy=").append(sysUpdatedBy);
         sb.append(", sysDeleted=").append(sysDeleted);
         sb.append(", object=").append(object);
-        sb.append(", sortDictionary=").append(sortDictionary);
+        sb.append(", dictionary=").append(dictionary);
         sb.append(", sortType=").append(sortType);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
