@@ -23,7 +23,7 @@ public class SysUiSectionElement implements Serializable {
 
     private Integer type;
 
-    private Integer sort;
+    private Integer position;
 
     private Integer layout;
 
@@ -115,12 +115,12 @@ public class SysUiSectionElement implements Serializable {
         this.type = type;
     }
 
-    public Integer getSort() {
-        return sort;
+    public Integer getPosition() {
+        return position;
     }
 
-    public void setSort(Integer sort) {
-        this.sort = sort;
+    public void setPosition(Integer position) {
+        this.position = position;
     }
 
     public Integer getLayout() {
@@ -171,7 +171,7 @@ public class SysUiSectionElement implements Serializable {
         sb.append(", section=").append(section);
         sb.append(", dictionary=").append(dictionary);
         sb.append(", type=").append(type);
-        sb.append(", sort=").append(sort);
+        sb.append(", position=").append(position);
         sb.append(", layout=").append(layout);
         sb.append(", mandatory=").append(mandatory);
         sb.append(", readOnly=").append(readOnly);

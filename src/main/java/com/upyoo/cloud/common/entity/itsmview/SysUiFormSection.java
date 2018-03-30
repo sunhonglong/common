@@ -1,6 +1,7 @@
 package com.upyoo.cloud.common.entity.itsmview;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class SysUiFormSection implements Serializable {
     private String sysId;
@@ -17,11 +18,13 @@ public class SysUiFormSection implements Serializable {
 
     private Integer sysDeleted;
 
-    private String view;
+    private String form;
 
     private String name;
 
-    private Integer sort;
+    private Integer position;
+
+    List<SysUiSectionElement> elements;
 
     private static final long serialVersionUID = 1L;
 
@@ -81,12 +84,12 @@ public class SysUiFormSection implements Serializable {
         this.sysDeleted = sysDeleted;
     }
 
-    public String getView() {
-        return view;
+    public String getForm() {
+        return form;
     }
 
-    public void setView(String view) {
-        this.view = view == null ? null : view.trim();
+    public void setForm(String form) {
+        this.form = form == null ? null : form.trim();
     }
 
     public String getName() {
@@ -97,12 +100,20 @@ public class SysUiFormSection implements Serializable {
         this.name = name == null ? null : name.trim();
     }
 
-    public Integer getSort() {
-        return sort;
+    public Integer getPosition() {
+        return position;
     }
 
-    public void setSort(Integer sort) {
-        this.sort = sort;
+    public void setPosition(Integer position) {
+        this.position = position;
+    }
+
+    public List<SysUiSectionElement> getElements() {
+        return elements;
+    }
+
+    public void setElements(List<SysUiSectionElement> elements) {
+        this.elements = elements;
     }
 
     @Override
@@ -118,9 +129,9 @@ public class SysUiFormSection implements Serializable {
         sb.append(", sysUpdatedOn=").append(sysUpdatedOn);
         sb.append(", sysUpdatedBy=").append(sysUpdatedBy);
         sb.append(", sysDeleted=").append(sysDeleted);
-        sb.append(", view=").append(view);
+        sb.append(", form=").append(form);
         sb.append(", name=").append(name);
-        sb.append(", sort=").append(sort);
+        sb.append(", position=").append(position);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
