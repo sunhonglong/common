@@ -2,7 +2,7 @@ package com.upyoo.cloud.common.entity;
 
 import java.io.Serializable;
 
-public class ResultModel implements Serializable {
+public class ResultModel<T> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -11,10 +11,17 @@ public class ResultModel implements Serializable {
 	public static final String RESULT_FAIL = "fail";
 
 	private int code = CODE_SUCCESS;
-	private Object data;
+	private T data;
 	private String message;
 	private String result = RESULT_SUCCESS;
+	private int totalCount;
 
+	public int getTotalCount() {
+		return totalCount;
+	}
+	public void setTotalCount(int totalCount) {
+		this.totalCount = totalCount;
+	}
 	public String getResult() {
 		return result;
 	}
@@ -31,11 +38,11 @@ public class ResultModel implements Serializable {
 		this.code = code;
 	}
 
-	public Object getData() {
+	public T getData() {
 		return data;
 	}
 
-	public void setData(Object data) {
+	public void setData(T data) {
 		this.data = data;
 	}
 
@@ -46,26 +53,32 @@ public class ResultModel implements Serializable {
 		this.message = message;
 	}
 
-	public static ResultModel createSuccess() {
-		ResultModel result = new ResultModel();
+	public static <T extends Object> ResultModel<T> createSuccess() {
+		ResultModel<T> result = new ResultModel<T>();
 		return result;
 	}
 
-	public static ResultModel createSuccess(Object data) {
-		ResultModel result = ResultModel.createSuccess();
+	public static <T extends Object> ResultModel<T> createSuccess(T data) {
+		ResultModel<T> result = ResultModel.createSuccess();
+		result.setData(data);
+		return result;
+	}
+	public static <T extends Object> ResultModel<T> createSuccess(T data, int totalCount) {
+		ResultModel<T> result = ResultModel.createSuccess();
+		result.setTotalCount(totalCount);
 		result.setData(data);
 		return result;
 	}
 
-	public static ResultModel createFail(int code) {
-		ResultModel result = new ResultModel();
+	public static <T extends Object> ResultModel<T> createFail(int code) {
+		ResultModel<T> result = new ResultModel<T>();
 		result.setResult(RESULT_FAIL);
 		result.setCode(code);
 		return result;
 	}
 
-	public static ResultModel createFail(int code, String message) {
-		ResultModel result = ResultModel.createFail(code);
+	public static <T extends Object> ResultModel<T> createFail(int code, String message) {
+		ResultModel<T> result = ResultModel.createFail(code);
 		result.setMessage(message);
 		return result;
 	}
