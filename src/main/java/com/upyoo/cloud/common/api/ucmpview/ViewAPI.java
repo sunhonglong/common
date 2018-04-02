@@ -23,4 +23,7 @@ public interface ViewAPI {
     @DeleteMapping("/form/{sysId}")
     public ResultModel deleteFormBySysId(@PathVariable("sysId") String sysId);
 
+    @GetMapping("/test")
+    public ResultModel test();
+
 }
