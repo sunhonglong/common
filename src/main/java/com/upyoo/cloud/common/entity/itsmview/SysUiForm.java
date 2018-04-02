@@ -1,5 +1,7 @@
 package com.upyoo.cloud.common.entity.itsmview;
 
+import com.upyoo.cloud.common.entity.model.DbObject;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -25,6 +27,8 @@ public class SysUiForm implements Serializable {
     private Integer isDefault;
 
     List<SysUiFormSection> sections;
+
+    DbObject dbObject;
 
     private static final long serialVersionUID = 1L;
 
@@ -114,6 +118,14 @@ public class SysUiForm implements Serializable {
 
     public void setSections(List<SysUiFormSection> sections) {
         this.sections = sections;
+    }
+
+    public DbObject getDbObject() {
+        return dbObject;
+    }
+
+    public void setDbObject(DbObject dbObject) {
+        this.dbObject = dbObject;
     }
 
     @Override

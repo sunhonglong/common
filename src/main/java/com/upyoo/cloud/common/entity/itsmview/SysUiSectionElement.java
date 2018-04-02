@@ -1,5 +1,7 @@
 package com.upyoo.cloud.common.entity.itsmview;
 
+import com.upyoo.cloud.common.entity.model.Dictionary;
+
 import java.io.Serializable;
 
 public class SysUiSectionElement implements Serializable {
@@ -32,6 +34,8 @@ public class SysUiSectionElement implements Serializable {
     private Integer readOnly;
 
     private String defaultValue;
+
+    Dictionary dbDictionary;
 
     private static final long serialVersionUID = 1L;
 
@@ -153,6 +157,14 @@ public class SysUiSectionElement implements Serializable {
 
     public void setDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue == null ? null : defaultValue.trim();
+    }
+
+    public Dictionary getDbDictionary() {
+        return dbDictionary;
+    }
+
+    public void setDbDictionary(Dictionary dbDictionary) {
+        this.dbDictionary = dbDictionary;
     }
 
     @Override
