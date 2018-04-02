@@ -13,14 +13,14 @@ import com.upyoo.cloud.common.entity.ResultModel;
 public interface TableModelAPI {
 
 	@GetMapping(value="/object/name/{name}")
-	public ResultModel getObjectByName(@PathVariable String name);
+	public ResultModel getObjectByName(@PathVariable("name") String name);
 	
 	@GetMapping(value="/object/{sysId}")
-	public ResultModel getObjectBySysId(@PathVariable String sysId);
+	public ResultModel getObjectBySysId(@PathVariable("sysId") String sysId);
 	
 	@GetMapping(value="/dictionary/table/{tableName}")
-	public ResultModel getListDic(@PathVariable String tableName);
+	public ResultModel getListDic(@PathVariable("tableName") String tableName);
 	
 	@GetMapping(value="/dictionary/{sysId}")
-	public ResultModel getDicBySysId(@PathVariable String sysId);
+	public ResultModel getDicBySysId(@PathVariable("sysId") String sysId);
 }
