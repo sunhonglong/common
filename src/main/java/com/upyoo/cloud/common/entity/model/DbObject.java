@@ -72,6 +72,8 @@ public class DbObject implements Serializable{
     private String ownerSysDbObjectSystem;
 
     private Integer functionClass;
+    
+    private String owner;
 
     public String getSysId() {
         return sysId;
@@ -344,4 +346,14 @@ public class DbObject implements Serializable{
     public void setFunctionClass(Integer functionClass) {
         this.functionClass = functionClass;
     }
+
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+    
+    
 }
