@@ -1,7 +1,7 @@
 package com.upyoo.cloud.common.api.ucmpview;
 
 import com.upyoo.cloud.common.entity.ResultModel;
-import com.upyoo.cloud.common.entity.itsmview.SysUiForm;
+import com.upyoo.cloud.common.entity.view.SysUiForm;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

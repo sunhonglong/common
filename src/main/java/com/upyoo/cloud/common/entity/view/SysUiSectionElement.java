@@ -1,23 +1,10 @@
-package com.upyoo.cloud.common.entity.itsmview;
+package com.upyoo.cloud.common.entity.view;
 
 import com.upyoo.cloud.common.entity.model.Dictionary;
 
-import java.io.Serializable;
-
-public class SysUiSectionElement implements Serializable {
-    private String sysId;
+public class SysUiSectionElement extends ViewBaseEntity {
 
     private String sysOwner;
-
-    private Long sysCreatedOn;
-
-    private String sysCreatedBy;
-
-    private Long sysUpdatedOn;
-
-    private String sysUpdatedBy;
-
-    private Integer sysDeleted;
 
     private String section;
 
@@ -39,60 +26,12 @@ public class SysUiSectionElement implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    public String getSysId() {
-        return sysId;
-    }
-
-    public void setSysId(String sysId) {
-        this.sysId = sysId == null ? null : sysId.trim();
-    }
-
     public String getSysOwner() {
         return sysOwner;
     }
 
     public void setSysOwner(String sysOwner) {
-        this.sysOwner = sysOwner == null ? null : sysOwner.trim();
-    }
-
-    public Long getSysCreatedOn() {
-        return sysCreatedOn;
-    }
-
-    public void setSysCreatedOn(Long sysCreatedOn) {
-        this.sysCreatedOn = sysCreatedOn;
-    }
-
-    public String getSysCreatedBy() {
-        return sysCreatedBy;
-    }
-
-    public void setSysCreatedBy(String sysCreatedBy) {
-        this.sysCreatedBy = sysCreatedBy == null ? null : sysCreatedBy.trim();
-    }
-
-    public Long getSysUpdatedOn() {
-        return sysUpdatedOn;
-    }
-
-    public void setSysUpdatedOn(Long sysUpdatedOn) {
-        this.sysUpdatedOn = sysUpdatedOn;
-    }
-
-    public String getSysUpdatedBy() {
-        return sysUpdatedBy;
-    }
-
-    public void setSysUpdatedBy(String sysUpdatedBy) {
-        this.sysUpdatedBy = sysUpdatedBy == null ? null : sysUpdatedBy.trim();
-    }
-
-    public Integer getSysDeleted() {
-        return sysDeleted;
-    }
-
-    public void setSysDeleted(Integer sysDeleted) {
-        this.sysDeleted = sysDeleted;
+        this.sysOwner = sysOwner;
     }
 
     public String getSection() {
@@ -100,7 +39,7 @@ public class SysUiSectionElement implements Serializable {
     }
 
     public void setSection(String section) {
-        this.section = section == null ? null : section.trim();
+        this.section = section;
     }
 
     public String getDictionary() {
@@ -108,7 +47,7 @@ public class SysUiSectionElement implements Serializable {
     }
 
     public void setDictionary(String dictionary) {
-        this.dictionary = dictionary == null ? null : dictionary.trim();
+        this.dictionary = dictionary;
     }
 
     public Integer getType() {
@@ -156,7 +95,7 @@ public class SysUiSectionElement implements Serializable {
     }
 
     public void setDefaultValue(String defaultValue) {
-        this.defaultValue = defaultValue == null ? null : defaultValue.trim();
+        this.defaultValue = defaultValue;
     }
 
     public Dictionary getDbDictionary() {
