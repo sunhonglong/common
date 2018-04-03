@@ -2,6 +2,7 @@ package com.upyoo.cloud.common.api.ucmpview;
 
 import com.upyoo.cloud.common.entity.ResultModel;
 import com.upyoo.cloud.common.entity.view.SysUiForm;
+import com.upyoo.cloud.common.entity.view.SysUiList;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,15 @@ public interface ViewAPI {
 
     @DeleteMapping("/form/{sysId}")
     public ResultModel deleteFormBySysId(@PathVariable("sysId") String sysId);
+
+    @PostMapping("/list")
+    public ResultModel saveList(@RequestBody SysUiList list);
+
+    @GetMapping("/list/{sysId}")
+    public ResultModel queryListBySysId(@PathVariable("sysId") String sysId);
+
+    @DeleteMapping("/list/{sysId}")
+    public ResultModel deleteListBySysId(@PathVariable("sysId") String sysId);
 
     @GetMapping("/test")
     public ResultModel test();
