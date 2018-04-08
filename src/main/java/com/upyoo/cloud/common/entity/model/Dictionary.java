@@ -72,6 +72,8 @@ public class Dictionary implements Serializable {
     private Integer viewType;
 
     private String owner;
+    
+    private Integer visible;
 
     public String getSysId() {
         return sysId;
@@ -344,4 +346,14 @@ public class Dictionary implements Serializable {
     public void setOwner(String owner) {
         this.owner = owner == null ? null : owner.trim();
     }
+
+	public Integer getVisible() {
+		return visible;
+	}
+
+	public void setVisible(Integer visible) {
+		this.visible = visible;
+	}
+    
+    
 }
