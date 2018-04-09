@@ -24,6 +24,9 @@ public interface ViewAPI {
     @DeleteMapping("/form/{sysId}")
     public ResultModel deleteFormBySysId(@PathVariable("sysId") String sysId);
 
+    @DeleteMapping("/form/{object}")
+    public ResultModel deleteFormByObject(@PathVariable("object") String object);
+
     @GetMapping("/table/{object}/form")
     public ResultModel queryFormByObject(@PathVariable("object") String object);
 
@@ -41,6 +44,9 @@ public interface ViewAPI {
 
     @DeleteMapping("/list/{sysId}")
     public ResultModel deleteListBySysId(@PathVariable("sysId") String sysId);
+
+    @DeleteMapping("/list/{object}")
+    public ResultModel deleteListByObject(@PathVariable("object") String object);
 
     @GetMapping("/test")
     public ResultModel test();
