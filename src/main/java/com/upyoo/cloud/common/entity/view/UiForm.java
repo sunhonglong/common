@@ -1,10 +1,11 @@
 package com.upyoo.cloud.common.entity.view;
 
+import com.upyoo.cloud.common.entity.BaseEntity;
 import com.upyoo.cloud.common.entity.model.DbObject;
 
 import java.util.List;
 
-public class UiForm extends ViewBaseEntity {
+public class UiForm extends BaseEntity {
 
     private String owner;
 

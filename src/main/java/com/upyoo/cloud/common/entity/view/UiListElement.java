@@ -1,8 +1,9 @@
 package com.upyoo.cloud.common.entity.view;
 
+import com.upyoo.cloud.common.entity.BaseEntity;
 import com.upyoo.cloud.common.entity.model.Dictionary;
 
-public class UiListElement extends ViewBaseEntity {
+public class UiListElement extends BaseEntity {
 
     private String list;
 

@@ -1,8 +1,9 @@
 package com.upyoo.cloud.common.entity.view;
 
+import com.upyoo.cloud.common.entity.BaseEntity;
 import com.upyoo.cloud.common.entity.model.Dictionary;
 
-public class UiSectionElement extends ViewBaseEntity {
+public class UiSectionElement extends BaseEntity {
 
     private String section;
 

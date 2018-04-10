@@ -1,10 +1,11 @@
 package com.upyoo.cloud.common.entity.view;
 
+import com.upyoo.cloud.common.entity.BaseEntity;
 import com.upyoo.cloud.common.entity.model.Dictionary;
 
 import java.util.List;
 
-public class UiList extends ViewBaseEntity {
+public class UiList extends BaseEntity {
 
     private String owner;
 

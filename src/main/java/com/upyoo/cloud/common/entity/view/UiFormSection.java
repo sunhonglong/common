@@ -2,7 +2,9 @@ package com.upyoo.cloud.common.entity.view;
 
 import java.util.List;
 
-public class UiFormSection extends ViewBaseEntity {
+import com.upyoo.cloud.common.entity.BaseEntity;
+
+public class UiFormSection extends BaseEntity {
 
     private String form;
 
