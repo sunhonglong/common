@@ -22,8 +22,11 @@ public interface TableModelAPI {
 	@GetMapping(value="/object/{sysId}")
 	public ResultModel<DbObject> getObjectBySysId(@PathVariable("sysId") String sysId);
 	
-	@GetMapping(value="/dictionary/table/{tableName}")
-	public ResultModel<List<Dictionary>> getListDic(@PathVariable String tableName,@RequestParam(value="visible",required=false) boolean visible);
+	@GetMapping(value="/dictionary/all/{tableName}")
+	public ResultModel<List<Dictionary>> getAllListDic(@PathVariable String tableName);
+	
+	@GetMapping(value="/dictionary/visible/{tableName}")
+	public ResultModel<List<Dictionary>> getVisibleListDic(@PathVariable String tableName);
 	
 	@GetMapping(value="/dictionary/{sysId}")
 	public ResultModel<Dictionary> getDicBySysId(@PathVariable("sysId") String sysId);
