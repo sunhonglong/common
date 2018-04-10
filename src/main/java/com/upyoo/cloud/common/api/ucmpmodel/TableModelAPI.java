@@ -35,5 +35,5 @@ public interface TableModelAPI {
 	public ResultModel<List<DbObject>> getAncestorByName(@PathVariable("tableName") String tableName);
 	
 	@GetMapping(value="/object/inherit/{tableName}")
-	public ResultModel<List<DbObject>> getInheritByName(@PathVariable String tableName,@RequestParam(value="onlyLeaf",required=false) boolean onlyLeaf);
+	public ResultModel<List<DbObject>> getInheritByName(@PathVariable("tableName") String tableName,@RequestParam(value="onlyLeaf",required=false) boolean onlyLeaf);
 }
