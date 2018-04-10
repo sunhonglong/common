@@ -24,6 +24,18 @@ public interface ViewAPI {
     @DeleteMapping("/form/{sysId}")
     public ResultModel deleteFormBySysId(@PathVariable("sysId") String sysId);
 
+    @DeleteMapping("/form/{object}")
+    public ResultModel deleteFormByObject(@PathVariable("object") String object);
+
+    @GetMapping("/table/{object}/form")
+    public ResultModel queryFormByObject(@PathVariable("object") String object);
+
+    @GetMapping("/table/one/{object}/form")
+    public ResultModel queryOneFormByObject(@PathVariable("object") String object);
+
+    @GetMapping("/task/{userId}/{taskId}")
+    public ResultModel queryFormByTask(@PathVariable("userId") String userId, @PathVariable("taskId") String taskId);
+
     @PostMapping("/list")
     public ResultModel saveList(@RequestBody SysUiList list);
 
@@ -32,6 +44,9 @@ public interface ViewAPI {
 
     @DeleteMapping("/list/{sysId}")
     public ResultModel deleteListBySysId(@PathVariable("sysId") String sysId);
+
+    @DeleteMapping("/list/{object}")
+    public ResultModel deleteListByObject(@PathVariable("object") String object);
 
     @GetMapping("/test")
     public ResultModel test();
