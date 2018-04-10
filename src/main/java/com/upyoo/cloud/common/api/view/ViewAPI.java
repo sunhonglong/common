@@ -51,7 +51,4 @@ public interface ViewAPI {
     @PostMapping("/init/{superObjectName}/{objectName}/{owner}")
     public ResultModel initView(@PathVariable("superObjectName") String superObjectName, @PathVariable("objectName") String objectName, @PathVariable("owner") String owner);
 
-    @GetMapping("/test")
-    public ResultModel test();
-
 }
