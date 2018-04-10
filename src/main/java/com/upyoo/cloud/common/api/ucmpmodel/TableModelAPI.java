@@ -23,10 +23,10 @@ public interface TableModelAPI {
 	public ResultModel<DbObject> getObjectBySysId(@PathVariable("sysId") String sysId);
 	
 	@GetMapping(value="/dictionary/all/{tableName}")
-	public ResultModel<List<Dictionary>> getAllListDic(@PathVariable String tableName);
+	public ResultModel<List<Dictionary>> getAllListDic(@PathVariable("tableName") String tableName);
 	
 	@GetMapping(value="/dictionary/visible/{tableName}")
-	public ResultModel<List<Dictionary>> getVisibleListDic(@PathVariable String tableName);
+	public ResultModel<List<Dictionary>> getVisibleListDic(@PathVariable("tableName") String tableName);
 	
 	@GetMapping(value="/dictionary/{sysId}")
 	public ResultModel<Dictionary> getDicBySysId(@PathVariable("sysId") String sysId);
