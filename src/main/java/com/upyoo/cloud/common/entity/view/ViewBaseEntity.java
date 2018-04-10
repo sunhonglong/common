@@ -3,40 +3,40 @@ package com.upyoo.cloud.common.entity.view;
 import java.io.Serializable;
 
 public class ViewBaseEntity implements Serializable {
-    String sysId;
-    Long sysCreatedOn;
-    Long sysUpdatedOn;
-    Integer sysDeleted;
+    String id;
+    Long createdOn;
+    Long updatedOn;
+    Integer deleted;
 
-    public String getSysId() {
-        return sysId;
+    public String getId() {
+        return id;
     }
 
-    public void setSysId(String sysId) {
-        this.sysId = sysId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public Long getSysCreatedOn() {
-        return sysCreatedOn;
+    public Long getCreatedOn() {
+        return createdOn;
     }
 
-    public void setSysCreatedOn(Long sysCreatedOn) {
-        this.sysCreatedOn = sysCreatedOn;
+    public void setCreatedOn(Long createdOn) {
+        this.createdOn = createdOn;
     }
 
-    public Long getSysUpdatedOn() {
-        return sysUpdatedOn;
+    public Long getUpdatedOn() {
+        return updatedOn;
     }
 
-    public void setSysUpdatedOn(Long sysUpdatedOn) {
-        this.sysUpdatedOn = sysUpdatedOn;
+    public void setUpdatedOn(Long updatedOn) {
+        this.updatedOn = updatedOn;
     }
 
-    public Integer getSysDeleted() {
-        return sysDeleted;
+    public Integer getDeleted() {
+        return deleted;
     }
 
-    public void setSysDeleted(Integer sysDeleted) {
-        this.sysDeleted = sysDeleted;
+    public void setDeleted(Integer deleted) {
+        this.deleted = deleted;
     }
 }
