@@ -5,9 +5,7 @@ import java.io.Serializable;
 public class ViewBaseEntity implements Serializable {
     String sysId;
     Long sysCreatedOn;
-    String sysCreatedBy;
     Long sysUpdatedOn;
-    String sysUpdatedBy;
     Integer sysDeleted;
 
     public String getSysId() {
@@ -26,28 +24,12 @@ public class ViewBaseEntity implements Serializable {
         this.sysCreatedOn = sysCreatedOn;
     }
 
-    public String getSysCreatedBy() {
-        return sysCreatedBy;
-    }
-
-    public void setSysCreatedBy(String sysCreatedBy) {
-        this.sysCreatedBy = sysCreatedBy;
-    }
-
     public Long getSysUpdatedOn() {
         return sysUpdatedOn;
     }
 
     public void setSysUpdatedOn(Long sysUpdatedOn) {
         this.sysUpdatedOn = sysUpdatedOn;
-    }
-
-    public String getSysUpdatedBy() {
-        return sysUpdatedBy;
-    }
-
-    public void setSysUpdatedBy(String sysUpdatedBy) {
-        this.sysUpdatedBy = sysUpdatedBy;
     }
 
     public Integer getSysDeleted() {

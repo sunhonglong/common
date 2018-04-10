@@ -54,9 +54,7 @@ public class SysUiListElement extends ViewBaseEntity {
         sb.append("Hash = ").append(hashCode());
         sb.append(", sysId=").append(sysId);
         sb.append(", sysCreatedOn=").append(sysCreatedOn);
-        sb.append(", sysCreatedBy=").append(sysCreatedBy);
         sb.append(", sysUpdatedOn=").append(sysUpdatedOn);
-        sb.append(", sysUpdatedBy=").append(sysUpdatedBy);
         sb.append(", sysDeleted=").append(sysDeleted);
         sb.append(", list=").append(list);
         sb.append(", dictionary=").append(dictionary);

@@ -77,9 +77,7 @@ public class SysUiForm extends ViewBaseEntity {
         sb.append(", sysId=").append(sysId);
         sb.append(", sysOwner=").append(sysOwner);
         sb.append(", sysCreatedOn=").append(sysCreatedOn);
-        sb.append(", sysCreatedBy=").append(sysCreatedBy);
         sb.append(", sysUpdatedOn=").append(sysUpdatedOn);
-        sb.append(", sysUpdatedBy=").append(sysUpdatedBy);
         sb.append(", sysDeleted=").append(sysDeleted);
         sb.append(", object=").append(object);
         sb.append(", name=").append(name);
