@@ -4,8 +4,6 @@ import com.upyoo.cloud.common.entity.model.Dictionary;
 
 public class SysUiSectionElement extends ViewBaseEntity {
 
-    private String sysOwner;
-
     private String section;
 
     private String dictionary;
@@ -25,14 +23,6 @@ public class SysUiSectionElement extends ViewBaseEntity {
     Dictionary dbDictionary;
 
     private static final long serialVersionUID = 1L;
-
-    public String getSysOwner() {
-        return sysOwner;
-    }
-
-    public void setSysOwner(String sysOwner) {
-        this.sysOwner = sysOwner;
-    }
 
     public String getSection() {
         return section;
@@ -113,7 +103,6 @@ public class SysUiSectionElement extends ViewBaseEntity {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", sysId=").append(sysId);
-        sb.append(", sysOwner=").append(sysOwner);
         sb.append(", sysCreatedOn=").append(sysCreatedOn);
         sb.append(", sysCreatedBy=").append(sysCreatedBy);
         sb.append(", sysUpdatedOn=").append(sysUpdatedOn);

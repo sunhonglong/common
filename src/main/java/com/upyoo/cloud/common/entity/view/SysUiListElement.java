@@ -4,8 +4,6 @@ import com.upyoo.cloud.common.entity.model.Dictionary;
 
 public class SysUiListElement extends ViewBaseEntity {
 
-    private String sysOwner;
-
     private String list;
 
     private String dictionary;
@@ -15,14 +13,6 @@ public class SysUiListElement extends ViewBaseEntity {
     Dictionary dbDictionary;
 
     private static final long serialVersionUID = 1L;
-
-    public String getSysOwner() {
-        return sysOwner;
-    }
-
-    public void setSysOwner(String sysOwner) {
-        this.sysOwner = sysOwner;
-    }
 
     public String getList() {
         return list;
@@ -63,7 +53,6 @@ public class SysUiListElement extends ViewBaseEntity {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", sysId=").append(sysId);
-        sb.append(", sysOwner=").append(sysOwner);
         sb.append(", sysCreatedOn=").append(sysCreatedOn);
         sb.append(", sysCreatedBy=").append(sysCreatedBy);
         sb.append(", sysUpdatedOn=").append(sysUpdatedOn);

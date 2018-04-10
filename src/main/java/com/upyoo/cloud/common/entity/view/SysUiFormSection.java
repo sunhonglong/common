@@ -4,8 +4,6 @@ import java.util.List;
 
 public class SysUiFormSection extends ViewBaseEntity {
 
-    private String sysOwner;
-
     private String form;
 
     private String name;
@@ -15,14 +13,6 @@ public class SysUiFormSection extends ViewBaseEntity {
     List<SysUiSectionElement> elements;
 
     private static final long serialVersionUID = 1L;
-
-    public String getSysOwner() {
-        return sysOwner;
-    }
-
-    public void setSysOwner(String sysOwner) {
-        this.sysOwner = sysOwner;
-    }
 
     public String getForm() {
         return form;
@@ -63,7 +53,6 @@ public class SysUiFormSection extends ViewBaseEntity {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", sysId=").append(sysId);
-        sb.append(", sysOwner=").append(sysOwner);
         sb.append(", sysCreatedOn=").append(sysCreatedOn);
         sb.append(", sysCreatedBy=").append(sysCreatedBy);
         sb.append(", sysUpdatedOn=").append(sysUpdatedOn);
