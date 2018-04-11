@@ -22,17 +22,17 @@ public interface ViewAPI {
     @DeleteMapping("/form/{id}")
     public ResultModel deleteFormById(@PathVariable("id") String id);
 
-    @DeleteMapping("/form/{objectName}")
+    @DeleteMapping("/form/table/{objectName}")
     public ResultModel deleteFormByObjectName(@PathVariable("objectName") String objectName);
 
-    @GetMapping("/form/{objectName}")
+    @GetMapping("/form/table/{objectName}")
     public ResultModel queryFormByObjectName(@PathVariable("objectName") String objectName);
 
-    @GetMapping("/form/one/{objectName}")
+    @GetMapping("/form/table/one/{objectName}")
     public ResultModel queryOneFormByObjectName(@PathVariable("objectName") String objectName);
 
-    @GetMapping("/task/{userId}/{taskId}/form")
-    public ResultModel queryFormByTask(@PathVariable("userId") String userId, @PathVariable("taskId") String taskId);
+    @GetMapping("/form/task/{taskId}/{userId}")
+    public ResultModel queryFormByTask(@PathVariable("taskId") String taskId, @PathVariable("userId") String userId);
 
     @PostMapping("/list")
     public ResultModel saveList(@RequestBody UiList list);
@@ -43,10 +43,10 @@ public interface ViewAPI {
     @DeleteMapping("/list/{id}")
     public ResultModel deleteListById(@PathVariable("id") String id);
 
-    @DeleteMapping("/list/{objectName}")
+    @DeleteMapping("/list/table/{objectName}")
     public ResultModel deleteListByObjectName(@PathVariable("objectName") String objectName);
 
-    @GetMapping("/list/{objectName}")
+    @GetMapping("/list/table/{objectName}")
     public ResultModel queryListByObjectName(@PathVariable("objectName") String objectName);
 
     @PostMapping("/init/{superObjectName}/{objectName}/{owner}")
