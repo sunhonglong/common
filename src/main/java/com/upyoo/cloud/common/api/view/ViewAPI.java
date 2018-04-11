@@ -32,7 +32,7 @@ public interface ViewAPI {
     public ResultModel queryOneFormByObjectName(@PathVariable("objectName") String objectName);
 
     @GetMapping("/form/task/{taskId}/{userId}")
-    public ResultModel queryFormByTask(@PathVariable("taskId") String taskId, @PathVariable("userId") String userId);
+    public ResultModel queryFormByTask(@PathVariable("userId") String userId, @PathVariable("taskId") String taskId);
 
     @PostMapping("/list")
     public ResultModel saveList(@RequestBody UiList list);
