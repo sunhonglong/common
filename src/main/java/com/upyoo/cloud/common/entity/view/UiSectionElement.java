@@ -1,14 +1,13 @@
 package com.upyoo.cloud.common.entity.view;
 
+import com.upyoo.cloud.common.entity.BaseEntity;
 import com.upyoo.cloud.common.entity.model.Dictionary;
 
-public class SysUiSectionElement extends ViewBaseEntity {
-
-    private String sysOwner;
+public class UiSectionElement extends BaseEntity {
 
     private String section;
 
-    private String dictionary;
+    private String dictionaryElement;
 
     private Integer type;
 
@@ -26,14 +25,6 @@ public class SysUiSectionElement extends ViewBaseEntity {
 
     private static final long serialVersionUID = 1L;
 
-    public String getSysOwner() {
-        return sysOwner;
-    }
-
-    public void setSysOwner(String sysOwner) {
-        this.sysOwner = sysOwner;
-    }
-
     public String getSection() {
         return section;
     }
@@ -42,12 +33,12 @@ public class SysUiSectionElement extends ViewBaseEntity {
         this.section = section;
     }
 
-    public String getDictionary() {
-        return dictionary;
+    public String getDictionaryElement() {
+        return dictionaryElement;
     }
 
-    public void setDictionary(String dictionary) {
-        this.dictionary = dictionary;
+    public void setDictionaryElement(String dictionaryElement) {
+        this.dictionaryElement = dictionaryElement;
     }
 
     public Integer getType() {
@@ -106,29 +97,5 @@ public class SysUiSectionElement extends ViewBaseEntity {
         this.dbDictionary = dbDictionary;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", sysId=").append(sysId);
-        sb.append(", sysOwner=").append(sysOwner);
-        sb.append(", sysCreatedOn=").append(sysCreatedOn);
-        sb.append(", sysCreatedBy=").append(sysCreatedBy);
-        sb.append(", sysUpdatedOn=").append(sysUpdatedOn);
-        sb.append(", sysUpdatedBy=").append(sysUpdatedBy);
-        sb.append(", sysDeleted=").append(sysDeleted);
-        sb.append(", section=").append(section);
-        sb.append(", dictionary=").append(dictionary);
-        sb.append(", type=").append(type);
-        sb.append(", position=").append(position);
-        sb.append(", layout=").append(layout);
-        sb.append(", mandatory=").append(mandatory);
-        sb.append(", readOnly=").append(readOnly);
-        sb.append(", defaultValue=").append(defaultValue);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
-    }
+
 }

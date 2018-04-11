@@ -2,7 +2,7 @@ package com.upyoo.cloud.common.entity;
 
 import java.io.Serializable;
 
-public class JenkinsCommand extends BaseEntity implements Serializable{
+public class JenkinsCommand extends BaseAlertEntity implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
