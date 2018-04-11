@@ -33,7 +33,7 @@ public interface ViewAPI {
     @GetMapping("/table/one/{objectName}/form")
     public ResultModel queryOneFormByObjectName(@PathVariable("objectName") String objectName);
 
-    @GetMapping("/task/{userId}/{taskId}")
+    @GetMapping("/task/{userId}/{taskId}/form")
     public ResultModel queryFormByTask(@PathVariable("userId") String userId, @PathVariable("taskId") String taskId);
 
     @PostMapping("/list")
