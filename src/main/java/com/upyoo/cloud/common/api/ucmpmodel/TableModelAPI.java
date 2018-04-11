@@ -36,4 +36,7 @@ public interface TableModelAPI {
 	
 	@GetMapping(value="/object/inherit/{tableName}")
 	public ResultModel<List<DbObject>> getInheritByName(@PathVariable("tableName") String tableName,@RequestParam(value="onlyLeaf",required=false) boolean onlyLeaf);
+	
+	@GetMapping(value="/dictionary")
+	public ResultModel<Dictionary> getDicByTableAndElement(@RequestParam("objectName") String objectName,@RequestParam("element") String element);
 }

@@ -57,8 +57,6 @@ public class Dictionary implements Serializable {
 
     private String regex;
 
-    private String multidata;
-
     private Integer viewType;
 
     private String owner;
@@ -274,14 +272,6 @@ public class Dictionary implements Serializable {
 
     public void setRegex(String regex) {
         this.regex = regex == null ? null : regex.trim();
-    }
-
-    public String getMultidata() {
-        return multidata;
-    }
-
-    public void setMultidata(String multidata) {
-        this.multidata = multidata == null ? null : multidata.trim();
     }
 
     public Integer getViewType() {
