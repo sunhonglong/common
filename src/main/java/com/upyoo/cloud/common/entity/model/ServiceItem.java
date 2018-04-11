@@ -11,7 +11,15 @@ public class ServiceItem extends BaseEntity{
 	private String serviceDesk;
 	private String dbObjectName;
 	private String dbObject;
+	private Integer sort;
 	
+	
+	public Integer getSort() {
+		return sort;
+	}
+	public void setSort(Integer sort) {
+		this.sort = sort;
+	}
 	public String getDbObjectName() {
 		return dbObjectName;
 	}
