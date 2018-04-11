@@ -27,10 +27,10 @@ public interface ViewAPI {
     @DeleteMapping("/form/{objectName}")
     public ResultModel deleteFormByObjectName(@PathVariable("objectName") String objectName);
 
-    @GetMapping("/table/{objectName}/form")
+    @GetMapping("/form/{objectName}")
     public ResultModel queryFormByObjectName(@PathVariable("objectName") String objectName);
 
-    @GetMapping("/table/one/{objectName}/form")
+    @GetMapping("/form/one/{objectName}")
     public ResultModel queryOneFormByObjectName(@PathVariable("objectName") String objectName);
 
     @GetMapping("/task/{userId}/{taskId}/form")
@@ -48,14 +48,8 @@ public interface ViewAPI {
     @DeleteMapping("/list/{objectName}")
     public ResultModel deleteListByObjectName(@PathVariable("objectName") String objectName);
 
-//    @GetMapping("/table/{objectName}/list")
-//    public ResultModel queryListByObjectName(@PathVariable("objectName") String objectName);
-//
-//    @GetMapping("/table/one/{objectName}/list")
-//    public ResultModel queryOneListByObjectName(@PathVariable("objectName") String objectName);
-//
-//    @GetMapping("/task/{userId}/{taskId}/list")
-//    public ResultModel queryListByTask(@PathVariable("userId") String userId, @PathVariable("taskId") String taskId);
+    @GetMapping("/list/{objectName}")
+    public ResultModel queryListByObjectName(@PathVariable("objectName") String objectName);
 
     @PostMapping("/init/{superObjectName}/{objectName}/{owner}")
     public ResultModel initView(@PathVariable("superObjectName") String superObjectName, @PathVariable("objectName") String objectName, @PathVariable("owner") String owner);
