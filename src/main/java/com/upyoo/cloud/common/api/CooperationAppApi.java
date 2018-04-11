@@ -45,8 +45,8 @@ public interface CooperationAppApi {
     @GetMapping("/query/owner/{owner}")
     public ResultModel queryByOwner(@PathVariable("owner") String owner);
 
-    @GetMapping("/query/type/{type}")
-    public ResultModel queryByType(@PathVariable("type") String type);
+    @GetMapping("/query/type/{type}/{owner}")
+    public ResultModel queryByType(@PathVariable("type") String type, @PathVariable("owner") String owner);
 
     @PostMapping("/add/udesk")
     public ResultModel addUdeskApp(@RequestBody String body);

@@ -2,7 +2,6 @@ package com.upyoo.cloud.common.entity.view;
 
 import com.upyoo.cloud.common.entity.BaseEntity;
 import com.upyoo.cloud.common.entity.model.DbObject;
-import com.upyoo.cloud.common.entity.model.Dictionary;
 
 import java.util.List;
 
@@ -12,13 +11,11 @@ public class UiList extends BaseEntity {
 
     private String dbObjectName;
 
-    private String dictionaryElement;
+    private String dictionaryElement; //排序字段
 
     private Integer sortType;
 
     DbObject dbObject;
-
-    Dictionary dbDictionary;
 
     List<UiListElement> elements;
 
@@ -54,14 +51,6 @@ public class UiList extends BaseEntity {
 
     public void setSortType(Integer sortType) {
         this.sortType = sortType;
-    }
-
-    public Dictionary getDbDictionary() {
-        return dbDictionary;
-    }
-
-    public void setDbDictionary(Dictionary dbDictionary) {
-        this.dbDictionary = dbDictionary;
     }
 
     public List<UiListElement> getElements() {
