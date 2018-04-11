@@ -10,8 +10,15 @@ public class ServiceDesk extends BaseEntity {
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private String owner;
+	private String color;
 	private List<ServiceItem> serviceItems = new ArrayList<>();
 
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
 	public String getName() {
 		return name;
 	}
