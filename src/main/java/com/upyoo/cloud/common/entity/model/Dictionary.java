@@ -35,17 +35,9 @@ public class Dictionary implements Serializable {
 
     private String referenceKey;
 
-    private String createRoles;
-
     private String defaultValue;
 
-    private String deleteRoles;
-
     private Integer readOnly;
-
-    private String readRoles;
-
-    private String referenceQual;
 
     private String referenceQualCondition;
 
@@ -56,8 +48,6 @@ public class Dictionary implements Serializable {
     private Long sysCreatedOn;
 
     private Integer sysModCount;
-
-    private String sysName;
 
     private String sysUpdatedBy;
 
@@ -195,13 +185,6 @@ public class Dictionary implements Serializable {
         this.referenceKey = referenceKey == null ? null : referenceKey.trim();
     }
 
-    public String getCreateRoles() {
-        return createRoles;
-    }
-
-    public void setCreateRoles(String createRoles) {
-        this.createRoles = createRoles == null ? null : createRoles.trim();
-    }
 
     public String getDefaultValue() {
         return defaultValue;
@@ -211,13 +194,6 @@ public class Dictionary implements Serializable {
         this.defaultValue = defaultValue == null ? null : defaultValue.trim();
     }
 
-    public String getDeleteRoles() {
-        return deleteRoles;
-    }
-
-    public void setDeleteRoles(String deleteRoles) {
-        this.deleteRoles = deleteRoles == null ? null : deleteRoles.trim();
-    }
 
     public Integer getReadOnly() {
         return readOnly;
@@ -227,21 +203,6 @@ public class Dictionary implements Serializable {
         this.readOnly = readOnly;
     }
 
-    public String getReadRoles() {
-        return readRoles;
-    }
-
-    public void setReadRoles(String readRoles) {
-        this.readRoles = readRoles == null ? null : readRoles.trim();
-    }
-
-    public String getReferenceQual() {
-        return referenceQual;
-    }
-
-    public void setReferenceQual(String referenceQual) {
-        this.referenceQual = referenceQual == null ? null : referenceQual.trim();
-    }
 
     public String getReferenceQualCondition() {
         return referenceQualCondition;
@@ -281,14 +242,6 @@ public class Dictionary implements Serializable {
 
     public void setSysModCount(Integer sysModCount) {
         this.sysModCount = sysModCount;
-    }
-
-    public String getSysName() {
-        return sysName;
-    }
-
-    public void setSysName(String sysName) {
-        this.sysName = sysName == null ? null : sysName.trim();
     }
 
     public String getSysUpdatedBy() {
