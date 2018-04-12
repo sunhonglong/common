@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class ResultModel<T> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-
+	 
 	public static final int CODE_SUCCESS = 0;
 	public static final String RESULT_SUCCESS = "success";
 	public static final String RESULT_FAIL = "fail";
@@ -71,16 +71,15 @@ public class ResultModel<T> implements Serializable {
 	}
 
 	public static <T extends Object> ResultModel<T> createFail(int code) {
-		ResultModel<T> result = new ResultModel<T>();
-		result.setResult(RESULT_FAIL);
-		result.setCode(code);
-		return result;
+		return createFail(code, null);
 	}
 
 	public static <T extends Object> ResultModel<T> createFail(int code, String message) {
-		ResultModel<T> result = ResultModel.createFail(code);
+		ResultModel<T> result =  new ResultModel<T>();
 		result.setMessage(message);
-		return result;
+		result.setResult(RESULT_FAIL);
+		result.setCode(code);
+		throw new ApiException(message,code);
 	}
 
 }
