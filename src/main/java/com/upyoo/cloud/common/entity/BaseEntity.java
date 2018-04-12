@@ -8,7 +8,7 @@ public class BaseEntity implements Serializable {
 	String id;
     Long createdOn;
     Long updatedOn;
-    Integer deleted;
+    Integer deleted = 0;
 
     public String getId() {
         return id;
