@@ -68,4 +68,16 @@ public class UiList extends BaseEntity {
     public void setDbObject(DbObject dbObject) {
         this.dbObject = dbObject;
     }
+
+    @Override
+    public String toString() {
+        return "UiList{" +
+                "owner='" + owner + '\'' +
+                ", dbObjectName='" + dbObjectName + '\'' +
+                ", dictionaryElement='" + dictionaryElement + '\'' +
+                ", sortType=" + sortType +
+                ", dbObject=" + dbObject +
+                ", elements=" + elements +
+                '}';
+    }
 }
