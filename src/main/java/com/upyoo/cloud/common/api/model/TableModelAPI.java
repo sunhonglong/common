@@ -1,4 +1,4 @@
-package com.upyoo.cloud.common.api.ucmpmodel;
+package com.upyoo.cloud.common.api.model;
 
 import com.upyoo.cloud.common.entity.ResultModel;
 import com.upyoo.cloud.common.entity.model.DbObject;
