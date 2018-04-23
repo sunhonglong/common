@@ -57,6 +57,6 @@ public interface CooperationAppApi {
     public ResultModel sendToTicket(@PathVariable("sysId") String sysId, @RequestBody String body);
 
     @PostMapping("/app/test")
-    public ResultModel test(HttpServletRequest request, @RequestBody String body);
+    public String test(HttpServletRequest request, @RequestBody String body);
 
 }
