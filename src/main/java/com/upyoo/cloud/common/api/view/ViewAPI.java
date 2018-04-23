@@ -54,8 +54,8 @@ public interface ViewAPI {
     @DeleteMapping("/list/table/{objectName}")
     public ResultModel deleteListByObjectName(@PathVariable("objectName") String objectName);
 
-    @GetMapping("/list/table/{objectName}")
-    public ResultModel queryListByObjectName(@PathVariable("objectName") String objectName);
+    @GetMapping("/list/table/{objectName}/{owner}")
+    public ResultModel queryListByObjectName(@PathVariable("objectName") String objectName, @PathVariable("owner") String owner);
 
     @PostMapping("/init/{superObjectName}/{objectName}/{owner}")
     public ResultModel initView(@PathVariable("superObjectName") String superObjectName, @PathVariable("objectName") String objectName, @PathVariable("owner") String owner);
