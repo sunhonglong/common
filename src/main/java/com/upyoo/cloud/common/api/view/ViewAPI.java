@@ -51,11 +51,14 @@ public interface ViewAPI {
     @DeleteMapping("/list/{id}")
     public ResultModel deleteListById(@PathVariable("id") String id);
 
+    @PutMapping("/list/{id}/{sortElement}/{sortType}")
+    public ResultModel updateListSort(@PathVariable("id") String id, @PathVariable("sortElement") String sortElement, @PathVariable("sortType") Integer sortType);
+
     @DeleteMapping("/list/table/{objectName}")
     public ResultModel deleteListByObjectName(@PathVariable("objectName") String objectName);
 
-    @GetMapping("/list/table/{objectName}")
-    public ResultModel queryListByObjectName(@PathVariable("objectName") String objectName);
+    @GetMapping("/list/table/{objectName}/{owner}")
+    public ResultModel queryListByObjectName(@PathVariable("objectName") String objectName, @PathVariable("owner") String owner);
 
     @PostMapping("/init/{superObjectName}/{objectName}/{owner}")
     public ResultModel initView(@PathVariable("superObjectName") String superObjectName, @PathVariable("objectName") String objectName, @PathVariable("owner") String owner);
