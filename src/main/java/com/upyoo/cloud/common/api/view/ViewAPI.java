@@ -51,6 +51,9 @@ public interface ViewAPI {
     @DeleteMapping("/list/{id}")
     public ResultModel deleteListById(@PathVariable("id") String id);
 
+    @PutMapping("/list/{id}/{sortElement}/{sortType}")
+    public ResultModel updateListSort(@PathVariable("id") String id, @PathVariable("sortElement") String sortElement, @PathVariable("sortType") Integer sortType);
+
     @DeleteMapping("/list/table/{objectName}")
     public ResultModel deleteListByObjectName(@PathVariable("objectName") String objectName);
 
