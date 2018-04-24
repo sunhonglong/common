@@ -62,6 +62,8 @@ public class Dictionary implements Serializable {
     private String owner;
     
     private Integer visible;
+    
+    private Integer sort;
 
     public String getSysId() {
         return sysId;
@@ -297,6 +299,16 @@ public class Dictionary implements Serializable {
 	public void setVisible(Integer visible) {
 		this.visible = visible;
 	}
+
+	public Integer getSort() {
+		return sort;
+	}
+
+	public void setSort(Integer sort) {
+		this.sort = sort;
+	}
+	
+	
     
     
 }
