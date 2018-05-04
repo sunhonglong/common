@@ -56,7 +56,7 @@ public interface CooperationAppApi {
     @PostMapping("/send/ticket/{sysId}")
     public ResultModel sendToTicket(@PathVariable("sysId") String sysId, @RequestBody String body);
 
-    @PostMapping("/slack/action")
-    public String actionSlack(@RequestParam("payload") String payload);
+    @PostMapping("/chatops/ding")
+    public ResultModel chatopsDing(@RequestParam("alert") String alert, @RequestParam("user") String user, @RequestParam("action") String action);
 
 }
