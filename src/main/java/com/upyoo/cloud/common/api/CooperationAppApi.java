@@ -56,13 +56,13 @@ public interface CooperationAppApi {
     @PostMapping("/send/ticket/{sysId}")
     public ResultModel sendToTicket(@PathVariable("sysId") String sysId, @RequestBody String body);
 
-    @PostMapping("/chatops/ding")
+    @PostMapping("/open/chatops/action")
     public ResultModel chatopsDing(@RequestParam("alert") String alert, @RequestParam("user") String user, @RequestParam("action") String action);
 
-    @GetMapping("/chatops/alert/{alert}/{owner}")
+    @GetMapping("/open/chatops/{alert}/{owner}")
     public ResultModel getUsersByAlertId(@PathVariable("alert") String alert, @PathVariable("owner") String owner, HttpServletRequest request);
 
-    @GetMapping("/chatops/alert/{alert}/status")
+    @GetMapping("/open/chatops/{alert}/status")
     public ResultModel getAlertStatus(@PathVariable("alert") String alert);
 
 }
