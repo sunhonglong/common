@@ -59,4 +59,10 @@ public interface CooperationAppApi {
     @PostMapping("/chatops/ding")
     public ResultModel chatopsDing(@RequestParam("alert") String alert, @RequestParam("user") String user, @RequestParam("action") String action);
 
+    @GetMapping("/alert/{alert}/{owner}")
+    public ResultModel getUsersByAlertId(@PathVariable("alert") String alert, @PathVariable("owner") String owner);
+
+    @GetMapping("/alert/{alert}/status")
+    public ResultModel getAlertStatus(@PathVariable("alert") String alert);
+
 }
