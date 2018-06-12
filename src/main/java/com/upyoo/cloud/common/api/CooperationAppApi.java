@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
-
 @FeignClient("cooperation")
 @RequestMapping("/cooperationapp")
 public interface CooperationAppApi {
@@ -56,7 +54,13 @@ public interface CooperationAppApi {
     @PostMapping("/send/ticket/{sysId}")
     public ResultModel sendToTicket(@PathVariable("sysId") String sysId, @RequestBody String body);
 
-    @PostMapping("/slack/action")
-    public String actionSlack(@RequestParam("payload") String payload);
+    @PostMapping("/open/chatops/action")
+    public ResultModel chatopsDing(@RequestParam("alert") String alert, @RequestParam("user") String user, @RequestParam("action") String action);
+
+    @GetMapping("/open/chatops/{alert}/{owner}")
+    public ResultModel getUsersByAlertId(@PathVariable("alert") String alert, @PathVariable("owner") String owner);
+
+    @GetMapping("/open/chatops/{alert}/status")
+    public ResultModel getAlertStatus(@PathVariable("alert") String alert);
 
 }
