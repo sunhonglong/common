@@ -1,6 +1,7 @@
 package com.upyoo.cloud.common.entity;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 public class BaseEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -10,6 +11,10 @@ public class BaseEntity implements Serializable {
     Long updatedOn;
     Integer deleted = 0;
 
+    public void generateId(){
+    	this.id = UUID.randomUUID().toString();
+    }
+    
     public String getId() {
         return id;
     }
