@@ -70,9 +70,13 @@ public class ResultModel<T> implements Serializable {
 		return result;
 	}
 
-	public static <T extends Object> ResultModel<T> createSuccess(T data, long totalCount) {
+	public static <T extends Object> ResultModel<T> createSuccess(T data, Long totalCount) {
 		ResultModel<T> result = ResultModel.createSuccess();
-		result.setTotalCount(Long.valueOf(totalCount).intValue());
+		if (totalCount == null) {
+			result.setTotalCount(0);
+		}else{
+			result.setTotalCount(Long.valueOf(totalCount).intValue());
+		}
 		result.setData(data);
 		return result;
 	}
