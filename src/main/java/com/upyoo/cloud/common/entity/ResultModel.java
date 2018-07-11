@@ -70,6 +70,17 @@ public class ResultModel<T> implements Serializable {
 		return result;
 	}
 
+	public static <T extends Object> ResultModel<T> createSuccess(T data, Long totalCount) {
+		ResultModel<T> result = ResultModel.createSuccess();
+		if (totalCount == null) {
+			result.setTotalCount(0);
+		}else{
+			result.setTotalCount(Long.valueOf(totalCount).intValue());
+		}
+		result.setData(data);
+		return result;
+	}
+	
 	public static <T extends Object> ResultModel<T> createFail(int code) {
 		return createFail(code, null);
 	}

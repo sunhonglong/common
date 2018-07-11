@@ -14,8 +14,17 @@ public class User implements Serializable {
 	private String mobile_phone;
 	private String wechat;
 	private String license;
+	private String photo;
+	
+	
 	
 	 
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
 	public String getName() {
 		return name;
 	}
