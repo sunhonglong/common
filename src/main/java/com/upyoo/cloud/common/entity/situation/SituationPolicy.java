@@ -2,44 +2,61 @@ package com.upyoo.cloud.common.entity.situation;
 
 import java.io.Serializable;
 
-public class SituationPolicy implements Serializable{
-	
+public class SituationPolicy implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	//ID
+	// ID
 	private String id;
-	//NAME
+	// NAME
 	private String name;
-	//SITUATION_DESCRIPTION
+	// SITUATION_DESCRIPTION
 	private String situationDescription;
-	//TRIGGER_FILTER
+	// TRIGGER_FILTER
 	private String triggerFilter;
-	//ALARM_THRESHOLD
+	// ALARM_THRESHOLD
 	private Integer alarmThreshold;
-	//COOK_FOR
+	// COOK_FOR
 	private Long cookFor;
-	//CONTENT_CLUSTER
-	private Integer contentCluster;//CONTENT_CLUSTER;
-	//CONTENT_CLUSTER_SIMILARITY
+	// CONTENT_CLUSTER
+	private Integer contentCluster;// CONTENT_CLUSTER;
+	// CONTENT_CLUSTER_SIMILARITY
 	private Float contentClusterSimilarity;
-	//HOST_CLUSTER
+	// HOST_CLUSTER
 	private Integer hostCluster;
-	//HOST_CLUSTER_SIMILARITY
+	// HOST_CLUSTER_SIMILARITY
 	private Float hostClusterSimilarity;
-	//SERVICE_CLUSTER
+	// SERVICE_CLUSTER
 	private Integer serviceCluster;
-	//SERVICE_CLUSTER_SIMILARITY
+	// SERVICE_CLUSTER_SIMILARITY
 	private Float serviceClusterSimilarity;
-	//OWNER
+	// ENTITY_CLUSTER
+	private Integer entityCluster;
+	// ENTITY_CLUSTER_SIMILARITY
+	private Float entityClusterSimilarity;
+
+	// OWNER
 	private String owner;
-	//CREATE_TIME
+	// CREATE_TIME
 	private Long createTime;
-	//UPDATE_TIME
+	// UPDATE_TIME
 	private Long updateTime;
-	//DELETED
+	// DELETED
 	private Integer deleted;
+
 	
 	
-	
+	public Integer getEntityCluster() {
+		return entityCluster;
+	}
+	public void setEntityCluster(Integer entityCluster) {
+		this.entityCluster = entityCluster;
+	}
+	public Float getEntityClusterSimilarity() {
+		return entityClusterSimilarity;
+	}
+	public void setEntityClusterSimilarity(Float entityClusterSimilarity) {
+		this.entityClusterSimilarity = entityClusterSimilarity;
+	}
 	public String getOwner() {
 		return owner;
 	}
@@ -136,11 +153,5 @@ public class SituationPolicy implements Serializable{
 	public void setDeleted(Integer deleted) {
 		this.deleted = deleted;
 	}
-	
-	
-	
-	
-	
-	
-	
+
 }
