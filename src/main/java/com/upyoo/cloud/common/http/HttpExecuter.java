@@ -12,6 +12,7 @@ import org.apache.http.auth.Credentials;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.AuthCache;
 import org.apache.http.client.CredentialsProvider;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
@@ -33,6 +34,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -49,6 +51,7 @@ public class HttpExecuter {
 	private List<Header> requestHeaders = new ArrayList<Header>();
 	private String stringRequestBody;
 	private byte[] byteRequestBody;
+	private Map<String, String> encodedFormBody;
 
 	private String url;
 	private HttpRequestBase method;
@@ -107,6 +110,16 @@ public class HttpExecuter {
 			method.setEntity(new StringEntity(stringRequestBody, charset));
 		} else if (byteRequestBody != null && byteRequestBody.length > 0) {
 			method.setEntity(new ByteArrayEntity(byteRequestBody));
+		} else if (encodedFormBody != null && encodedFormBody.size() > 0) {
+			try {
+				List<NameValuePair> paramList = new ArrayList<>();
+				for (Map.Entry<String, String> entry : encodedFormBody.entrySet()) {
+					paramList.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+				}
+				method.setEntity(new UrlEncodedFormEntity(paramList, charset));
+			} catch (UnsupportedEncodingException e) {
+				logger.error(e.getMessage(), e);
+			}
 		}
 	}
 
@@ -265,6 +278,10 @@ public class HttpExecuter {
 
 	public void setRequestBody(byte[] byteRequestBody) {
 		this.byteRequestBody = byteRequestBody;
+	}
+
+	public void setRequestBody(Map<String, String> encodedFormBody) {
+		this.encodedFormBody = encodedFormBody;
 	}
 
 	public void setUrl(String url) {
