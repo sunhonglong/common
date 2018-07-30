@@ -15,10 +15,16 @@ public class User implements Serializable {
 	private String wechat;
 	private String license;
 	private String photo;
-	
+	private String channelId;
 	
 	
 	 
+	public String getChannelId() {
+		return channelId;
+	}
+	public void setChannelId(String channelId) {
+		this.channelId = channelId;
+	}
 	public String getPhoto() {
 		return photo;
 	}
